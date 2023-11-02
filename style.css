@@ -1,0 +1,241 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap");
+
+:root {
+  --Moderate-blue: hsl(238, 40%, 52%);
+  --Soft-Red: hsl(358, 79%, 66%);
+  --Light-grayish-blue: hsl(239, 57%, 85%);
+  --Pale-red: hsl(357, 100%, 86%);
+
+  --Dark-blue: hsl(212, 24%, 26%);
+  --Grayish-Blue: hsl(211, 10%, 45%);
+  --Light-gray: hsl(223, 19%, 93%);
+  --Very-light-gray: hsl(228, 33%, 97%);
+  --White: hsl(0, 0%, 100%);
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  background-color: var(--Light-gray);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+section {
+  /* width: 100%; */
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+
+.comment-section {
+  padding: 1.5rem;
+  width: 60%;
+  min-width: 45rem;
+  /* min-width: 90%; */
+}
+.comment {
+  position: relative;
+  background-color: var(--White);
+  width: 100%;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-radius: 10px;
+  display: flex;
+}
+.user-info {
+  display: flex;
+  align-items: center;
+}
+.name {
+  margin: 0 1rem 0 0;
+}
+
+.comment-info {
+  width: 100%;
+}
+
+.reply-btn,
+.edit-btn,
+.delete-btn {
+  margin-left: 1rem;
+}
+
+.btn-action {
+  display: flex;
+  position: absolute;
+  right: 5%;
+}
+
+img {
+  width: 60%;
+}
+.comment-content {
+  margin-top: 1rem;
+  min-width: 100%;
+  color: var(--Grayish-Blue);
+}
+.date-of-post {
+  color: var(--Grayish-Blue);
+}
+.btn-action a {
+  text-decoration: none;
+  color: var(--Moderate-blue);
+}
+.replayTo {
+  color: var(--Moderate-blue);
+}
+.delete-btn a {
+  color: var(--Soft-Red);
+}
+
+.level {
+  background-color: var(--Very-light-gray);
+  padding: 0.7rem;
+  margin-right: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.plus,
+.minus {
+  color: var(--Light-grayish-blue);
+  cursor: pointer;
+}
+
+.reply-comment,
+.create-comment {
+  background-color: var(--White);
+  padding: 1.5rem;
+  width: 100%;
+  margin-bottom: 1.5rem;
+  border-radius: 10px;
+  display: flex;
+  align-items: flex-start;
+}
+form {
+  width: 100%;
+  display: flex;
+}
+
+textarea {
+  width: 100%;
+}
+form button {
+  height: fit-content;
+  margin-left: 1rem;
+}
+
+form button:hover {
+  opacity: 0.5;
+}
+
+.comment-subsection {
+  width: 90%;
+  align-items: end;
+}
+.badge {
+  margin: 0 1rem 0 0;
+  background-color: var(--Moderate-blue);
+  color: white;
+  padding: 4px 8px;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.background {
+  height: 100vh;
+  width: 100vw;
+
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+  top: 0;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* display: none; */
+}
+
+.popUp {
+  background-color: var(--White);
+  width: 500px;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.buttons {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.buttons button {
+  padding: 10px 40px;
+}
+
+.hidden {
+  display: none;
+}
+
+@media only screen and (max-width: 900px) {
+  .comment-section {
+    padding: 1.5rem 0.5rem 1.5rem 0.5rem;
+    min-width: 100%;
+  }
+
+  .comment {
+    min-height: 280px;
+    padding: 1.5rem 0.5rem 1.5rem 0.5rem;
+    margin-bottom: 1.5rem;
+  }
+  .btn-action {
+    bottom: 5%;
+  }
+  .comment-content {
+    margin: 0.3rem 0 12% 0;
+  }
+  .comment-subsection {
+    width: 95%;
+  }
+  .level {
+    background-color: var(--Very-light-gray);
+    padding: 0.3rem;
+    margin-right: 1rem;
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    bottom: 5%;
+  }
+  .plus,
+  .minus {
+    margin: 0 0.8rem;
+  }
+
+  .reply-comment,
+  .create-comment {
+    position: relative;
+    background-color: var(--White);
+    padding: 1.5rem 1.5rem 0 1.5rem;
+    width: 100%;
+    margin-bottom: 1.5rem;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-start;
+  }
+  form button {
+    position: absolute;
+    right: 5%;
+    bottom: 5%;
+  }
+  .create-comment img {
+    margin: 0.5rem 0;
+  }
+  form {
+    height: 65%;
+  }
+}
